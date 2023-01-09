@@ -1,11 +1,19 @@
 console.log("Webpack is good");
 
+const Asteroid = require("./asteroid.js");
 const MovingObject = require("./moving_object.js");
+
 
 window.MovingObject = MovingObject;
 
 const canvasEl = document.getElementById("canvas");
 const ctx = canvasEl.getContext("2d");
+
+// const ast = new Asteroid({
+//     pos: [90, 90]
+// })
+
+// ast.draw(ctx);
 
 const mo1 = new MovingObject({
     pos: [30, 30],
@@ -33,4 +41,6 @@ mo2.draw(ctx);
 mo3.draw(ctx);
 
 
-mo1.move()
+mo1.move();
+mo2.move();
+mo3.move();
